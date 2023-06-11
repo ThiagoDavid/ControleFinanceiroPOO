@@ -1,0 +1,90 @@
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+C:\Users\joao\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+C:\Users\joao\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+C:\Users\joao\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+C:\Users\joao\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+C:\Users\joao\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+C:\Users\joao\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+F:\Program Files\Microsoft Visual Studio\source\ControleFinanceiro - Copia\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
