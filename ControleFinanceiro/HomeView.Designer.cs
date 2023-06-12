@@ -111,7 +111,7 @@
             // 
             this.searchTextField.Name = "searchTextField";
             this.searchTextField.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.searchTextField.Size = new System.Drawing.Size(90, 28);
+            this.searchTextField.Size = new System.Drawing.Size(70, 28);
             // 
             // btnSearch
             // 
@@ -229,6 +229,7 @@
             this.comboBoxMes.Name = "comboBoxMes";
             this.comboBoxMes.Size = new System.Drawing.Size(133, 23);
             this.comboBoxMes.TabIndex = 6;
+            this.comboBoxMes.SelectedIndexChanged += new System.EventHandler(this.comboBoxMes_SelectedIndexChanged);
             // 
             // labelMes
             // 

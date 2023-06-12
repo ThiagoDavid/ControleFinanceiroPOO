@@ -13,8 +13,14 @@ namespace ControleFinanceiro
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
+        {                       
+            SetupDate();
+            CarregaGrid();  
+        }
+        private void SetupDate()
         {
-            CarregaGrid();                          // Pode carregar o Grid com Dados
+            numericUpDownAno.Value = DateTime.Now.Year;
+            comboBoxMes.SelectedIndex = DateTime.Now.Month-1;
         }
 
         private void CarregaGrid()                       // Função para Carregar/Montar Grid
@@ -25,16 +31,26 @@ namespace ControleFinanceiro
                 carregaGridDespesas();
         }
 
-        private void carregaGridReceitas()
+        private void carregaGridReceitas(int mes = 0, int ano = 0)
         {
+            if(ano == 0 )
+                ano = (int)numericUpDownAno.Value;
+            if(mes == 0 )
+                mes = comboBoxMes.SelectedIndex + 1;
+
             dataGridReceitas.DataSource = null;
-            dataGridReceitas.DataSource = controller.Dados.Receitas;
+            dataGridReceitas.DataSource = controller.GetReceitas(mes, ano);
             setupGridStyle(dataGridReceitas);
         }
-        private void carregaGridDespesas()
+        private void carregaGridDespesas(int mes = 0, int ano = 0)
         {
+            if (ano == 0)
+                ano = (int)numericUpDownAno.Value;
+            if (mes == 0)
+                mes = comboBoxMes.SelectedIndex + 1;
+
             dataGridDespesas.DataSource = null;
-            dataGridDespesas.DataSource = controller.Dados.Despesas;
+            dataGridDespesas.DataSource = controller.GetDespesas(mes, ano);
             setupGridStyle(dataGridDespesas);
         }
         private void setupGridStyle(DataGridView dataGrid)
@@ -55,13 +71,19 @@ namespace ControleFinanceiro
 
         private void buttonAddReceita_Click(object sender, EventArgs e)
         {
-            controller.Add(new Receita("", 0.0, new DateTime()));
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
+            DateTime data = new DateTime(ano, mes, 1);
+
+            controller.Add(new Receita("", 0.0, data ));
             carregaGridReceitas();
         }
 
         private void buttonAddDespesa_Click(object sender, EventArgs e)
         {
-            controller.Add(new Despesa("", 0.0, new DateTime()));
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
+            controller.Add(new Despesa("", 0.0, new DateTime(ano, mes, 1)));
             carregaGridDespesas();
         }
 
@@ -122,6 +144,12 @@ namespace ControleFinanceiro
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxMes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            carregaGridReceitas();
+            carregaGridDespesas();
         }
     }
 }
