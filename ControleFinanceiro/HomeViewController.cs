@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace ControleFinanceiro
 {
@@ -57,6 +58,28 @@ namespace ControleFinanceiro
         public void SalvarDados()
         {
             dados.Salvar();
+        }
+
+        public ArrayList GetReceitas(int mes = 0, int ano = 0)
+        {
+            if (mes == 0)
+                mes = DateTime.Now.Month;
+            if (ano == 0)
+                ano = DateTime.Now.Year;
+            ArrayList dados = this.dados.Receitas;
+
+            return  new ArrayList(dados.Cast<Receita>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
+        }
+
+        public ArrayList GetDespesas(int mes = 0, int ano = 0)
+        {
+            if (mes == 0)
+                mes = DateTime.Now.Month;
+            if (ano == 0)
+                ano = DateTime.Now.Year;
+            ArrayList dados = this.dados.Despesas;
+
+            return new ArrayList(dados.Cast<Despesa>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
         }
     }
 }
