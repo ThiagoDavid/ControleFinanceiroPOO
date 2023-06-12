@@ -54,6 +54,36 @@ namespace ControleFinanceiro
             Dados.Despesas.RemoveAt(index);
         }
 
+        public double TotalDeReceitas()
+        {
+            double total = 0;
+
+            foreach (Receita receita in Dados.Receitas)
+            {
+                total += receita.Value;
+
+            }
+        
+            return total;
+        }
+
+        public double TodalDeDespesas()
+        {
+            double total = 0;
+
+            foreach (Despesa despesa in Dados.Despesas)
+            {
+                total += despesa.Value;
+            }
+
+            return total;
+        }
+
+        public double TotalDeSaldo()
+        {
+            return TotalDeReceitas() - TodalDeDespesas();
+        }
+
         public void SalvarDados()
         {
             dados.Salvar();

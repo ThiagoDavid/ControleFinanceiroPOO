@@ -11,12 +11,14 @@ namespace ControleFinanceiro
         protected string _descricao;
         protected double _value;
         protected DateTime _data;
+        public double publicValue;
         protected Lancamento() { }
         protected Lancamento(string descricao, double value, DateTime date)
         {
             _descricao = descricao;
             _value = value;
             _data = date;
+            publicValue = value;
         }
         public void LêDados()
         {

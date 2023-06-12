@@ -47,7 +47,8 @@ namespace ControleFinanceiro
                 dataGrid.Columns[2].Visible = false;
                 dataGrid.Columns[3].Visible = false; // deabilita id
                 dataGrid.Columns[4].Visible = false; // esabilita categoria
-            } else
+            }
+            else
             {
                 Console.WriteLine("Log - Tentou carregar datagrid com dados vazios.");
             }
@@ -73,6 +74,8 @@ namespace ControleFinanceiro
             novaReceita.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
             controller.UpdateData(novaReceita, dataGridReceitas.CurrentRow.Index);
+            carregaValorDeReceitas();
+            carregaValorDeSaldo();
         }
 
         private void dataGridDespesas_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -82,7 +85,10 @@ namespace ControleFinanceiro
             novaDespesa.Value = Convert.ToDouble(dataGridDespesas.CurrentRow.Cells[1].Value);
             novaDespesa.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
-            controller.UpdateData( novaDespesa, dataGridDespesas.CurrentRow.Index);
+            controller.UpdateData(novaDespesa, dataGridDespesas.CurrentRow.Index);
+
+            carregaValorDeDespesas();
+            carregaValorDeSaldo();
         }
 
         private void btnRemoverEntrada_Click(object sender, EventArgs e)
@@ -92,6 +98,8 @@ namespace ControleFinanceiro
 
             controller.RemoveReceita(dataGridReceitas.CurrentRow.Index);
             carregaGridReceitas();
+            carregaValorDeReceitas();
+            carregaValorDeSaldo();
         }
 
         private void btnRemoverSaida_Click(object sender, EventArgs e)
@@ -101,11 +109,28 @@ namespace ControleFinanceiro
 
             controller.RemoveDespesas(dataGridDespesas.CurrentRow.Index);
             carregaGridDespesas();
+            carregaGridDespesas();
+            carregaValorDeSaldo();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             controller.SalvarDados();
+        }
+
+        private void carregaValorDeReceitas()
+        {
+            labelEntradasTotaisValor.Text = $"R${controller.TotalDeReceitas()}";
+        }
+
+        private void carregaValorDeDespesas()
+        {
+            labelSaidasTotaisValor.Text = $"R${controller.TodalDeDespesas()}";
+        }
+
+        private void carregaValorDeSaldo()
+        {
+            labelSaldoTotal.Text = $"R${controller.TotalDeSaldo()}";
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
