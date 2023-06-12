@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
+    "C:\\Users\\joao\\projetop\\ControleFinanceiroPOO\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
   },
   "projects": {
-    "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {
+    "C:\\Users\\joao\\projetop\\ControleFinanceiroPOO\\ControleFinanceiro\\ControleFinanceiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectUniqueName": "C:\\Users\\joao\\projetop\\ControleFinanceiroPOO\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "projectName": "ControleFinanceiro",
-        "projectPath": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
-        "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\obj\\",
+        "projectPath": "C:\\Users\\joao\\projetop\\ControleFinanceiroPOO\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "packagesPath": "C:\\Users\\joao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joao\\projetop\\ControleFinanceiroPOO\\ControleFinanceiro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Thiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joao\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
