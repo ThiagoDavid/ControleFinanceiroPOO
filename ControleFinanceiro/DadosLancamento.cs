@@ -19,7 +19,6 @@ namespace ControleFinanceiro
         {
             Receitas = new ArrayList();
             Despesas = new ArrayList();
-            LerArquivo();
         }
 
         public ArrayList Receitas { get => _receitas; set => _receitas = value; }
@@ -45,13 +44,15 @@ namespace ControleFinanceiro
 
         public int SalvarDespesas()
         {
-            string dataPath = Constantes.dataPath;
-            if (!Directory.Exists(dataPath))
+            string folderPath = @"F:\DadosLancamentos";
+            if (!Directory.Exists(folderPath))
             {
-                Directory.CreateDirectory(dataPath);
+                Directory.CreateDirectory(folderPath);
             }
 
-            TextWriter MeuWriter = new StreamWriter(Constantes.despesasFilePath);
+            string filePath = "F:\\DadosLancamentos\\Despesas.xml";
+
+            TextWriter MeuWriter = new StreamWriter(filePath);
 
             Despesa[] ListaLancamentoVetor = (Despesa[])Despesas.ToArray(typeof(Despesa));
 
@@ -67,12 +68,12 @@ namespace ControleFinanceiro
         }
         public int SalvarReceitas()
         {
-            string dataPath = Constantes.dataPath; // testar sem arquivo.
-            if (!Directory.Exists(dataPath))
+            string folderPath = @"F:\DadosLancamentos";
+            if (!Directory.Exists(folderPath))
             {
-                Directory.CreateDirectory(dataPath);
+                Directory.CreateDirectory(folderPath);
             }
-            string filePath = Constantes.receitasFilePath;
+            string filePath = "F:\\DadosLancamentos\\Receitas.xml";
             TextWriter MeuWriter = new StreamWriter(filePath);
 
             Receita[] ListaLancamentoVetor = (Receita[])Receitas.ToArray(typeof(Receita));
@@ -86,73 +87,6 @@ namespace ControleFinanceiro
             MeuWriter.Close();
 
             return Receitas.Count;
-        }
-
-        public void LerArquivo()
-        {
-            LerReceitas();
-            LerDespesas();
-        }
-
-        public int LerReceitas()
-        {
-            // se não encontar a pasta não vai tentar carregar nada.
-
-            string filePath = Constantes.receitasFilePath;
-
-            if (!Directory.Exists(Constantes.dataPath) || !File.Exists(filePath))
-            {
-                return -1;
-            }
-
-            int Reg;
-
-            FileStream Arquivo = new FileStream(filePath, FileMode.Open);
-
-            Receita[] ListaAlunoVetor = (Receita[])Receitas.ToArray(typeof(Receita));
-
-            XmlSerializer Serialização = new XmlSerializer(ListaAlunoVetor.GetType());
-
-            ListaAlunoVetor = (Receita[])Serialização.Deserialize(Arquivo);
-
-            Receitas.Clear();
-
-            Receitas.AddRange(ListaAlunoVetor);
-
-            Reg = Receitas.Count;
-
-            Arquivo.Close();
-
-            return Reg;
-        }
-        public int LerDespesas()
-        {
-            string filePath = Constantes.despesasFilePath;
-
-            if (!Directory.Exists(Constantes.dataPath) || !File.Exists(filePath))
-            {
-                return -1;
-            }
-
-            int Reg;
-
-            FileStream Arquivo = new FileStream(filePath, FileMode.Open);
-
-            Despesa[] ListaAlunoVetor = (Despesa[])Despesas.ToArray(typeof(Despesa));
-
-            XmlSerializer Serialização = new XmlSerializer(ListaAlunoVetor.GetType());
-
-            ListaAlunoVetor = (Despesa[])Serialização.Deserialize(Arquivo);
-
-            Despesas.Clear();
-
-            Despesas.AddRange(ListaAlunoVetor);
-
-            Reg = Despesas.Count;
-
-            Arquivo.Close();
-
-            return Reg;
         }
     }
 }

@@ -88,3 +88,21 @@ F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinancei
 F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
 F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
 F:\Program Files\Microsoft Visual Studio\POO\ControleFinanceiro\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.exe
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.deps.json
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.runtimeconfig.json
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.dll
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\bin\Debug\net6.0-windows\ControleFinanceiro.pdb
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.AssemblyReference.cache
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.HomeView.resources
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.Properties.Resources.resources
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.GenerateResource.cache
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfoInputs.cache
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.AssemblyInfo.cs
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.csproj.CoreCompileInputs.cache
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.dll
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\refint\ControleFinanceiro.dll
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.pdb
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ControleFinanceiro.genruntimeconfig.cache
+D:\Users\Rique\Área de Trabalho\TRABALHO POO\Nova pasta\ControleFinanceiroPOO-master\ControleFinanceiro\obj\Debug\net6.0-windows\ref\ControleFinanceiro.dll

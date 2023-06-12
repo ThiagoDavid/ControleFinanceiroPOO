@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
+    "D:\\Users\\Rique\\Área de Trabalho\\TRABALHO POO\\Nova pasta\\ControleFinanceiroPOO-master\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
   },
   "projects": {
-    "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {
+    "D:\\Users\\Rique\\Área de Trabalho\\TRABALHO POO\\Nova pasta\\ControleFinanceiroPOO-master\\ControleFinanceiro\\ControleFinanceiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectUniqueName": "D:\\Users\\Rique\\Área de Trabalho\\TRABALHO POO\\Nova pasta\\ControleFinanceiroPOO-master\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "projectName": "ControleFinanceiro",
-        "projectPath": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
-        "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Microsoft Visual Studio\\POO\\ControleFinanceiro\\ControleFinanceiro\\obj\\",
+        "projectPath": "D:\\Users\\Rique\\Área de Trabalho\\TRABALHO POO\\Nova pasta\\ControleFinanceiroPOO-master\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "packagesPath": "C:\\Users\\Rique\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Rique\\Área de Trabalho\\TRABALHO POO\\Nova pasta\\ControleFinanceiroPOO-master\\ControleFinanceiro\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Thiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
