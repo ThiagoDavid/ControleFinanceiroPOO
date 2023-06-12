@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeView));
             this.dataGridReceitas = new System.Windows.Forms.DataGridView();
             this.dataGridDespesas = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.buttonSave = new System.Windows.Forms.ToolStripButton();
-            this.buttonAddReceita = new System.Windows.Forms.ToolStripButton();
-            this.btnRemoverEntrada = new System.Windows.Forms.ToolStripButton();
             this.searchTextField = new System.Windows.Forms.ToolStripTextBox();
             this.btnSearch = new System.Windows.Forms.ToolStripButton();
-            this.buttonAddDespesa = new System.Windows.Forms.ToolStripButton();
-            this.btnRemoverSaida = new System.Windows.Forms.ToolStripButton();
             this.labelEntradas = new System.Windows.Forms.Label();
             this.labelEntradasTotais = new System.Windows.Forms.Label();
             this.labelSaidas = new System.Windows.Forms.Label();
@@ -51,6 +48,11 @@
             this.labelAno = new System.Windows.Forms.Label();
             this.labelSaldo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lblAddReceitas = new System.Windows.Forms.Label();
+            this.lblRemoverReceitas = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAddSaida = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDespesas)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -60,24 +62,22 @@
             // dataGridReceitas
             // 
             this.dataGridReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReceitas.Location = new System.Drawing.Point(25, 171);
-            this.dataGridReceitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridReceitas.Location = new System.Drawing.Point(22, 128);
             this.dataGridReceitas.Name = "dataGridReceitas";
             this.dataGridReceitas.RowHeadersWidth = 51;
             this.dataGridReceitas.RowTemplate.Height = 25;
-            this.dataGridReceitas.Size = new System.Drawing.Size(571, 432);
+            this.dataGridReceitas.Size = new System.Drawing.Size(500, 324);
             this.dataGridReceitas.TabIndex = 0;
             this.dataGridReceitas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridReceitas_CellEndEdit);
             // 
             // dataGridDespesas
             // 
             this.dataGridDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDespesas.Location = new System.Drawing.Point(651, 171);
-            this.dataGridDespesas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridDespesas.Location = new System.Drawing.Point(570, 128);
             this.dataGridDespesas.Name = "dataGridDespesas";
             this.dataGridDespesas.RowHeadersWidth = 51;
             this.dataGridDespesas.RowTemplate.Height = 25;
-            this.dataGridDespesas.Size = new System.Drawing.Size(571, 432);
+            this.dataGridDespesas.Size = new System.Drawing.Size(500, 324);
             this.dataGridDespesas.TabIndex = 1;
             this.dataGridDespesas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDespesas_CellEndEdit);
             // 
@@ -86,15 +86,11 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonSave,
-            this.buttonAddReceita,
-            this.buttonAddDespesa,
             this.searchTextField,
-            this.btnSearch,
-            this.btnRemoverEntrada,
-            this.btnRemoverSaida});
+            this.btnSearch});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1269, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(1110, 28);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -105,43 +101,17 @@
             this.buttonSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
             this.buttonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(20, 1, 0, 2);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(20, 2, 10, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(29, 34);
+            this.buttonSave.Size = new System.Drawing.Size(24, 24);
             this.buttonSave.Text = "Salvar";
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // buttonAddReceita
-            // 
-            this.buttonAddReceita.AccessibleDescription = "Botão para adicionar nova receita";
-            this.buttonAddReceita.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.buttonAddReceita.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddReceita.Image")));
-            this.buttonAddReceita.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonAddReceita.Name = "buttonAddReceita";
-            this.buttonAddReceita.Padding = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.buttonAddReceita.Size = new System.Drawing.Size(44, 34);
-            this.buttonAddReceita.Tag = "adicionarReceita";
-            this.buttonAddReceita.Text = "Inserir Receita (entrada)";
-            this.buttonAddReceita.Click += new System.EventHandler(this.buttonAddReceita_Click);
-            // 
-            // btnRemoverEntrada
-            // 
-            this.btnRemoverEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRemoverEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverEntrada.Image")));
-            this.btnRemoverEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRemoverEntrada.Name = "btnRemoverEntrada";
-            this.btnRemoverEntrada.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.btnRemoverEntrada.Size = new System.Drawing.Size(54, 34);
-            this.btnRemoverEntrada.Tag = "removerReceita";
-            this.btnRemoverEntrada.Text = "Remover Receita ";
-            this.btnRemoverEntrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRemoverEntrada.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.btnRemoverEntrada.Click += new System.EventHandler(this.btnRemoverEntrada_Click);
             // 
             // searchTextField
             // 
             this.searchTextField.Name = "searchTextField";
-            this.searchTextField.Size = new System.Drawing.Size(114, 37);
+            this.searchTextField.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.searchTextField.Size = new System.Drawing.Size(90, 28);
             // 
             // btnSearch
             // 
@@ -150,41 +120,16 @@
             this.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(34, 34);
+            this.btnSearch.Size = new System.Drawing.Size(34, 25);
             this.btnSearch.Text = "toolStripButton1";
-            // 
-            // buttonAddDespesa
-            // 
-            this.buttonAddDespesa.AccessibleDescription = "Botão para adicionar nova despesa";
-            this.buttonAddDespesa.AccessibleName = "buttonAddDespesa";
-            this.buttonAddDespesa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.buttonAddDespesa.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddDespesa.Image")));
-            this.buttonAddDespesa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonAddDespesa.MergeAction = System.Windows.Forms.MergeAction.Insert;
-            this.buttonAddDespesa.Name = "buttonAddDespesa";
-            this.buttonAddDespesa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.buttonAddDespesa.Size = new System.Drawing.Size(44, 34);
-            this.buttonAddDespesa.Text = "Inserir Despesa (saida)";
-            this.buttonAddDespesa.Click += new System.EventHandler(this.buttonAddDespesa_Click);
-            // 
-            // btnRemoverSaida
-            // 
-            this.btnRemoverSaida.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRemoverSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverSaida.Image")));
-            this.btnRemoverSaida.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRemoverSaida.Name = "btnRemoverSaida";
-            this.btnRemoverSaida.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnRemoverSaida.Size = new System.Drawing.Size(44, 34);
-            this.btnRemoverSaida.Text = "Remover Despesa";
-            this.btnRemoverSaida.Click += new System.EventHandler(this.btnRemoverSaida_Click);
             // 
             // labelEntradas
             // 
             this.labelEntradas.AutoSize = true;
             this.labelEntradas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelEntradas.Location = new System.Drawing.Point(25, 135);
+            this.labelEntradas.Location = new System.Drawing.Point(22, 101);
             this.labelEntradas.Name = "labelEntradas";
-            this.labelEntradas.Size = new System.Drawing.Size(94, 28);
+            this.labelEntradas.Size = new System.Drawing.Size(76, 21);
             this.labelEntradas.TabIndex = 3;
             this.labelEntradas.Text = "Entradas";
             // 
@@ -192,9 +137,9 @@
             // 
             this.labelEntradasTotais.AutoSize = true;
             this.labelEntradasTotais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelEntradasTotais.Location = new System.Drawing.Point(25, 613);
+            this.labelEntradasTotais.Location = new System.Drawing.Point(22, 460);
             this.labelEntradasTotais.Name = "labelEntradasTotais";
-            this.labelEntradasTotais.Size = new System.Drawing.Size(196, 28);
+            this.labelEntradasTotais.Size = new System.Drawing.Size(154, 21);
             this.labelEntradasTotais.TabIndex = 3;
             this.labelEntradasTotais.Text = "ENTRADAS TOTAIS:";
             // 
@@ -202,9 +147,9 @@
             // 
             this.labelSaidas.AutoSize = true;
             this.labelSaidas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSaidas.Location = new System.Drawing.Point(651, 135);
+            this.labelSaidas.Location = new System.Drawing.Point(570, 101);
             this.labelSaidas.Name = "labelSaidas";
-            this.labelSaidas.Size = new System.Drawing.Size(72, 28);
+            this.labelSaidas.Size = new System.Drawing.Size(59, 21);
             this.labelSaidas.TabIndex = 4;
             this.labelSaidas.Text = "Saídas";
             // 
@@ -212,9 +157,9 @@
             // 
             this.labelSaidasTotais.AutoSize = true;
             this.labelSaidasTotais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSaidasTotais.Location = new System.Drawing.Point(651, 613);
+            this.labelSaidasTotais.Location = new System.Drawing.Point(570, 460);
             this.labelSaidasTotais.Name = "labelSaidasTotais";
-            this.labelSaidasTotais.Size = new System.Drawing.Size(161, 28);
+            this.labelSaidasTotais.Size = new System.Drawing.Size(127, 21);
             this.labelSaidasTotais.TabIndex = 3;
             this.labelSaidasTotais.Text = "SAÍDAS TOTAIS:";
             // 
@@ -223,9 +168,9 @@
             this.labelEntradasTotaisValor.AutoSize = true;
             this.labelEntradasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelEntradasTotaisValor.ForeColor = System.Drawing.Color.Green;
-            this.labelEntradasTotaisValor.Location = new System.Drawing.Point(230, 613);
+            this.labelEntradasTotaisValor.Location = new System.Drawing.Point(201, 460);
             this.labelEntradasTotaisValor.Name = "labelEntradasTotaisValor";
-            this.labelEntradasTotaisValor.Size = new System.Drawing.Size(78, 28);
+            this.labelEntradasTotaisValor.Size = new System.Drawing.Size(60, 21);
             this.labelEntradasTotaisValor.TabIndex = 3;
             this.labelEntradasTotaisValor.Text = "R$0,00";
             // 
@@ -234,16 +179,16 @@
             this.labelSaidasTotaisValor.AutoSize = true;
             this.labelSaidasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelSaidasTotaisValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelSaidasTotaisValor.Location = new System.Drawing.Point(818, 613);
+            this.labelSaidasTotaisValor.Location = new System.Drawing.Point(716, 460);
             this.labelSaidasTotaisValor.Name = "labelSaidasTotaisValor";
-            this.labelSaidasTotaisValor.Size = new System.Drawing.Size(78, 28);
+            this.labelSaidasTotaisValor.Size = new System.Drawing.Size(60, 21);
             this.labelSaidasTotaisValor.TabIndex = 3;
             this.labelSaidasTotaisValor.Text = "R$0,00";
-            this.labelSaidasTotaisValor.Click += new System.EventHandler(this.labelSaidasTotaisValue_Click);
             // 
             // numericUpDownAno
             // 
-            this.numericUpDownAno.Location = new System.Drawing.Point(693, 5);
+            this.numericUpDownAno.Location = new System.Drawing.Point(606, 4);
+            this.numericUpDownAno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownAno.Maximum = new decimal(new int[] {
             2099,
             0,
@@ -255,7 +200,7 @@
             0,
             0});
             this.numericUpDownAno.Name = "numericUpDownAno";
-            this.numericUpDownAno.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownAno.Size = new System.Drawing.Size(131, 23);
             this.numericUpDownAno.TabIndex = 5;
             this.numericUpDownAno.Value = new decimal(new int[] {
             2023,
@@ -279,18 +224,19 @@
             "OUTUBRO",
             "NOVEMBRO",
             "DEZEMBRO"});
-            this.comboBoxMes.Location = new System.Drawing.Point(459, 4);
+            this.comboBoxMes.Location = new System.Drawing.Point(402, 3);
+            this.comboBoxMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMes.Name = "comboBoxMes";
-            this.comboBoxMes.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxMes.Size = new System.Drawing.Size(133, 23);
             this.comboBoxMes.TabIndex = 6;
             // 
             // labelMes
             // 
             this.labelMes.AutoSize = true;
             this.labelMes.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMes.Location = new System.Drawing.Point(414, 9);
+            this.labelMes.Location = new System.Drawing.Point(362, 7);
             this.labelMes.Name = "labelMes";
-            this.labelMes.Size = new System.Drawing.Size(41, 20);
+            this.labelMes.Size = new System.Drawing.Size(33, 15);
             this.labelMes.TabIndex = 7;
             this.labelMes.Text = "MÊS:";
             this.labelMes.Click += new System.EventHandler(this.label1_Click);
@@ -299,9 +245,9 @@
             // 
             this.labelAno.AutoSize = true;
             this.labelAno.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelAno.Location = new System.Drawing.Point(645, 8);
+            this.labelAno.Location = new System.Drawing.Point(564, 6);
             this.labelAno.Name = "labelAno";
-            this.labelAno.Size = new System.Drawing.Size(44, 20);
+            this.labelAno.Size = new System.Drawing.Size(36, 15);
             this.labelAno.TabIndex = 8;
             this.labelAno.Text = "ANO:";
             // 
@@ -309,9 +255,9 @@
             // 
             this.labelSaldo.AutoSize = true;
             this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSaldo.Location = new System.Drawing.Point(1042, 614);
+            this.labelSaldo.Location = new System.Drawing.Point(912, 460);
             this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(82, 28);
+            this.labelSaldo.Size = new System.Drawing.Size(66, 21);
             this.labelSaldo.TabIndex = 9;
             this.labelSaldo.Text = "SALDO:";
             // 
@@ -320,19 +266,92 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1144, 613);
+            this.label2.Location = new System.Drawing.Point(1001, 460);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 28);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "R$0,00";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "plus.png");
+            this.imageList1.Images.SetKeyName(1, "minus.png");
+            this.imageList1.Images.SetKeyName(2, "minus-button.png");
+            this.imageList1.Images.SetKeyName(3, "remove.png");
+            // 
+            // lblAddReceitas
+            // 
+            this.lblAddReceitas.AutoSize = true;
+            this.lblAddReceitas.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddReceitas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblAddReceitas.ImageIndex = 0;
+            this.lblAddReceitas.ImageList = this.imageList1;
+            this.lblAddReceitas.Location = new System.Drawing.Point(254, 97);
+            this.lblAddReceitas.Name = "lblAddReceitas";
+            this.lblAddReceitas.Size = new System.Drawing.Size(118, 25);
+            this.lblAddReceitas.TabIndex = 11;
+            this.lblAddReceitas.Text = "     Adicionar";
+            this.lblAddReceitas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAddReceitas.Click += new System.EventHandler(this.buttonAddReceita_Click);
+            // 
+            // lblRemoverReceitas
+            // 
+            this.lblRemoverReceitas.AutoSize = true;
+            this.lblRemoverReceitas.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRemoverReceitas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblRemoverReceitas.ImageIndex = 2;
+            this.lblRemoverReceitas.ImageList = this.imageList1;
+            this.lblRemoverReceitas.Location = new System.Drawing.Point(378, 98);
+            this.lblRemoverReceitas.Name = "lblRemoverReceitas";
+            this.lblRemoverReceitas.Size = new System.Drawing.Size(110, 25);
+            this.lblRemoverReceitas.TabIndex = 12;
+            this.lblRemoverReceitas.Text = "     Remover";
+            this.lblRemoverReceitas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblRemoverReceitas.Click += new System.EventHandler(this.btnRemoverEntrada_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label1.ImageIndex = 2;
+            this.label1.ImageList = this.imageList1;
+            this.label1.Location = new System.Drawing.Point(951, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "     Remover";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.btnRemoverSaida_Click);
+            // 
+            // lblAddSaida
+            // 
+            this.lblAddSaida.AutoSize = true;
+            this.lblAddSaida.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddSaida.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblAddSaida.ImageIndex = 0;
+            this.lblAddSaida.ImageList = this.imageList1;
+            this.lblAddSaida.Location = new System.Drawing.Point(827, 99);
+            this.lblAddSaida.Name = "lblAddSaida";
+            this.lblAddSaida.Size = new System.Drawing.Size(118, 25);
+            this.lblAddSaida.TabIndex = 13;
+            this.lblAddSaida.Text = "     Adicionar";
+            this.lblAddSaida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAddSaida.Click += new System.EventHandler(this.buttonAddDespesa_Click);
             // 
             // HomeView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1269, 676);
+            this.ClientSize = new System.Drawing.Size(1110, 507);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAddSaida);
+            this.Controls.Add(this.lblRemoverReceitas);
+            this.Controls.Add(this.lblAddReceitas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSaldo);
             this.Controls.Add(this.labelAno);
@@ -348,7 +367,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridDespesas);
             this.Controls.Add(this.dataGridReceitas);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HomeView";
             this.Text = "MÊS";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -367,11 +385,7 @@
         private DataGridView dataGridReceitas;
         private DataGridView dataGridDespesas;
         private ToolStrip toolStrip1;
-        private ToolStripButton buttonAddReceita;
-        private ToolStripButton buttonAddDespesa;
-        private ToolStripButton btnRemoverEntrada;
         private ToolStripTextBox searchTextField;
-        private ToolStripButton btnRemoverSaida;
         private Label labelEntradas;
         private Label labelEntradasTotais;   // possui o texto "Entradas"
         private Label labelEntradasTotaisValor;   // valor das entradas 
@@ -386,5 +400,10 @@
         private Label labelAno;
         private Label labelSaldo;
         private Label label2;
+        private ImageList imageList1;
+        private Label lblAddReceitas;
+        private Label lblRemoverReceitas;
+        private Label label1;
+        private Label lblAddSaida;
     }
 }
