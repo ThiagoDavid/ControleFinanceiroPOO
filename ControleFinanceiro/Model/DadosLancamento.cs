@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Reflection;
 
-namespace ControleFinanceiro
+namespace ControleFinanceiro.Model
 {
     class DadosLancamento
     {
@@ -27,23 +27,31 @@ namespace ControleFinanceiro
 
         public void Add(Lancamento lancamneto)
         {
-            if (lancamneto.GetType().Equals(typeof(ControleFinanceiro.Receita)))
+            if (lancamneto.GetType().Equals(typeof(Receita)))
             {
-                this._receitas.Add(lancamneto);
+                _receitas.Add(lancamneto);
             }
             else
             {
-                this._despesas.Add(lancamneto);
+                _despesas.Add(lancamneto);
             }
         }
 
         public void Salvar()
         {
-            SalvarDespesas();
-            SalvarReceitas();
+            try
+            {
+                SalvarDespesas();
+                SalvarReceitas();
+                MessageBox.Show("Dados foram salvos.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Problemas ao salvar arquivos: {e}", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public int SalvarDespesas()
+        public void SalvarDespesas()
         {
             string dataPath = Constantes.dataPath;
             if (!Directory.Exists(dataPath))
@@ -62,11 +70,10 @@ namespace ControleFinanceiro
             Serialização.Serialize(MeuWriter, ListaLancamentoVetor);
 
             MeuWriter.Close();
-
-            return Despesas.Count;
         }
-        public int SalvarReceitas()
+        public void SalvarReceitas()
         {
+
             string dataPath = Constantes.dataPath; // testar sem arquivo.
             if (!Directory.Exists(dataPath))
             {
@@ -84,17 +91,22 @@ namespace ControleFinanceiro
             Serialização.Serialize(MeuWriter, ListaLancamentoVetor);
 
             MeuWriter.Close();
-
-            return Receitas.Count;
         }
 
         public void LerArquivo()
         {
-            LerReceitas();
-            LerDespesas();
+            try
+            {
+                LerReceitas();
+                LerDespesas();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Ocorreu um erro ao recuperar os dados: {e}", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public int LerReceitas()
+        public void LerReceitas()
         {
             // se não encontar a pasta não vai tentar carregar nada.
 
@@ -102,7 +114,7 @@ namespace ControleFinanceiro
 
             if (!Directory.Exists(Constantes.dataPath) || !File.Exists(filePath))
             {
-                return -1;
+                return;
             }
 
             int Reg;
@@ -123,15 +135,15 @@ namespace ControleFinanceiro
 
             Arquivo.Close();
 
-            return Reg;
+
         }
-        public int LerDespesas()
+        public void LerDespesas()
         {
             string filePath = Constantes.despesasFilePath;
 
             if (!Directory.Exists(Constantes.dataPath) || !File.Exists(filePath))
             {
-                return -1;
+                return;
             }
 
             int Reg;
@@ -151,8 +163,6 @@ namespace ControleFinanceiro
             Reg = Despesas.Count;
 
             Arquivo.Close();
-
-            return Reg;
         }
     }
 }

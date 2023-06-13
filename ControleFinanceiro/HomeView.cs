@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
+using ControleFinanceiro.Model;
 
 namespace ControleFinanceiro
 {
@@ -29,6 +30,7 @@ namespace ControleFinanceiro
                 carregaGridReceitas();
             if (controller.Dados.Receitas.Count != 0)
                 carregaGridDespesas();
+            atualizarSaldo();
         }
 
         private void carregaGridReceitas(int mes = 0, int ano = 0)
@@ -95,6 +97,7 @@ namespace ControleFinanceiro
             novaReceita.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
             controller.UpdateData(novaReceita, dataGridReceitas.CurrentRow.Index);
+            atualizarSaldo();
         }
 
         private void dataGridDespesas_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -105,23 +108,29 @@ namespace ControleFinanceiro
             novaDespesa.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
             controller.UpdateData( novaDespesa, dataGridDespesas.CurrentRow.Index);
+            atualizarSaldo();
         }
 
         private void btnRemoverEntrada_Click(object sender, EventArgs e)
         {
             if (dataGridReceitas.CurrentRow == null)
+            {
+                MessageBox.Show("A planilha já está vazia", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // do nothing
+            }
 
-            controller.RemoveReceita(dataGridReceitas.CurrentRow.Index);
+            controller.RemoveReceita(Convert.ToString(dataGridReceitas.CurrentRow.Cells[3].Value));
             carregaGridReceitas();
         }
 
         private void btnRemoverSaida_Click(object sender, EventArgs e)
         {
             if (dataGridDespesas.CurrentRow == null)
+            {
+                MessageBox.Show("A planilha já esta vazia", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // do nothing
-
-            controller.RemoveDespesas(dataGridDespesas.CurrentRow.Index);
+            }
+            controller.RemoveDespesas(Convert.ToString(dataGridDespesas.CurrentRow.Cells[3].Value));
             carregaGridDespesas();
         }
 
@@ -141,15 +150,22 @@ namespace ControleFinanceiro
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBoxMes_SelectedIndexChanged(object sender, EventArgs e)
         {
             carregaGridReceitas();
             carregaGridDespesas();
+        }
+        private void atualizarSaldo()
+        {
+            labelEntradasTotaisValor.Text = $"{controller.TotalDeReceitas().ToString("C")}";        
+            labelSaidasTotaisValor.Text = $"{controller.TodalDeDespesas().ToString("C")}";
+            double saldo = controller.TotalDeSaldo();
+            labelSaldoTotal.Text = $"{saldo.ToString("C")}";
+            if (saldo > 0)
+                labelSaldoTotal.ForeColor = Color.DarkOliveGreen;
+            else if (saldo < 0)
+                labelSaldoTotal.ForeColor = Color.DarkRed;
         }
     }
 }

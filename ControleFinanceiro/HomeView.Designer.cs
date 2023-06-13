@@ -46,13 +46,13 @@
             this.comboBoxMes = new System.Windows.Forms.ComboBox();
             this.labelMes = new System.Windows.Forms.Label();
             this.labelAno = new System.Windows.Forms.Label();
-            this.labelSaldo = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lblAddReceitas = new System.Windows.Forms.Label();
-            this.lblRemoverReceitas = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblAddSaida = new System.Windows.Forms.Label();
+            this.labelSaldo = new System.Windows.Forms.Label();
+            this.labelSaldoTotal = new System.Windows.Forms.Label();
+            this.btnAddEntrada = new System.Windows.Forms.Button();
+            this.btnAddSaida = new System.Windows.Forms.Button();
+            this.btnRemoveEntrada = new System.Windows.Forms.Button();
+            this.btnRemoveSaida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDespesas)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -62,6 +62,7 @@
             // dataGridReceitas
             // 
             this.dataGridReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridReceitas.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridReceitas.Location = new System.Drawing.Point(22, 128);
             this.dataGridReceitas.Name = "dataGridReceitas";
             this.dataGridReceitas.RowHeadersWidth = 51;
@@ -73,6 +74,7 @@
             // dataGridDespesas
             // 
             this.dataGridDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDespesas.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridDespesas.Location = new System.Drawing.Point(570, 128);
             this.dataGridDespesas.Name = "dataGridDespesas";
             this.dataGridDespesas.RowHeadersWidth = 51;
@@ -90,7 +92,7 @@
             this.btnSearch});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1110, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1157, 28);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -111,7 +113,7 @@
             // 
             this.searchTextField.Name = "searchTextField";
             this.searchTextField.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.searchTextField.Size = new System.Drawing.Size(70, 28);
+            this.searchTextField.Size = new System.Drawing.Size(0, 28);
             // 
             // btnSearch
             // 
@@ -136,10 +138,10 @@
             // labelEntradasTotais
             // 
             this.labelEntradasTotais.AutoSize = true;
-            this.labelEntradasTotais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelEntradasTotais.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelEntradasTotais.Location = new System.Drawing.Point(22, 460);
             this.labelEntradasTotais.Name = "labelEntradasTotais";
-            this.labelEntradasTotais.Size = new System.Drawing.Size(154, 21);
+            this.labelEntradasTotais.Size = new System.Drawing.Size(136, 19);
             this.labelEntradasTotais.TabIndex = 3;
             this.labelEntradasTotais.Text = "ENTRADAS TOTAIS:";
             // 
@@ -156,32 +158,32 @@
             // labelSaidasTotais
             // 
             this.labelSaidasTotais.AutoSize = true;
-            this.labelSaidasTotais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSaidasTotais.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelSaidasTotais.Location = new System.Drawing.Point(570, 460);
             this.labelSaidasTotais.Name = "labelSaidasTotais";
-            this.labelSaidasTotais.Size = new System.Drawing.Size(127, 21);
+            this.labelSaidasTotais.Size = new System.Drawing.Size(113, 19);
             this.labelSaidasTotais.TabIndex = 3;
             this.labelSaidasTotais.Text = "SAÍDAS TOTAIS:";
             // 
             // labelEntradasTotaisValor
             // 
             this.labelEntradasTotaisValor.AutoSize = true;
-            this.labelEntradasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelEntradasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelEntradasTotaisValor.ForeColor = System.Drawing.Color.Green;
-            this.labelEntradasTotaisValor.Location = new System.Drawing.Point(201, 460);
+            this.labelEntradasTotaisValor.Location = new System.Drawing.Point(179, 460);
             this.labelEntradasTotaisValor.Name = "labelEntradasTotaisValor";
-            this.labelEntradasTotaisValor.Size = new System.Drawing.Size(60, 21);
+            this.labelEntradasTotaisValor.Size = new System.Drawing.Size(52, 19);
             this.labelEntradasTotaisValor.TabIndex = 3;
             this.labelEntradasTotaisValor.Text = "R$0,00";
             // 
             // labelSaidasTotaisValor
             // 
             this.labelSaidasTotaisValor.AutoSize = true;
-            this.labelSaidasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSaidasTotaisValor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelSaidasTotaisValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelSaidasTotaisValor.Location = new System.Drawing.Point(716, 460);
+            this.labelSaidasTotaisValor.Location = new System.Drawing.Point(698, 460);
             this.labelSaidasTotaisValor.Name = "labelSaidasTotaisValor";
-            this.labelSaidasTotaisValor.Size = new System.Drawing.Size(60, 21);
+            this.labelSaidasTotaisValor.Size = new System.Drawing.Size(52, 19);
             this.labelSaidasTotaisValor.TabIndex = 3;
             this.labelSaidasTotaisValor.Text = "R$0,00";
             // 
@@ -190,12 +192,12 @@
             this.numericUpDownAno.Location = new System.Drawing.Point(606, 4);
             this.numericUpDownAno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownAno.Maximum = new decimal(new int[] {
-            2099,
+            9999,
             0,
             0,
             0});
             this.numericUpDownAno.Minimum = new decimal(new int[] {
-            2023,
+            1000,
             0,
             0,
             0});
@@ -207,6 +209,7 @@
             0,
             0,
             0});
+            this.numericUpDownAno.ValueChanged += new System.EventHandler(this.comboBoxMes_SelectedIndexChanged);
             // 
             // comboBoxMes
             // 
@@ -252,27 +255,6 @@
             this.labelAno.TabIndex = 8;
             this.labelAno.Text = "ANO:";
             // 
-            // labelSaldo
-            // 
-            this.labelSaldo.AutoSize = true;
-            this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSaldo.Location = new System.Drawing.Point(912, 460);
-            this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(66, 21);
-            this.labelSaldo.TabIndex = 9;
-            this.labelSaldo.Text = "SALDO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1001, 460);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "R$0,00";
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -283,77 +265,103 @@
             this.imageList1.Images.SetKeyName(2, "minus-button.png");
             this.imageList1.Images.SetKeyName(3, "remove.png");
             // 
-            // lblAddReceitas
+            // labelSaldo
             // 
-            this.lblAddReceitas.AutoSize = true;
-            this.lblAddReceitas.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAddReceitas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblAddReceitas.ImageIndex = 0;
-            this.lblAddReceitas.ImageList = this.imageList1;
-            this.lblAddReceitas.Location = new System.Drawing.Point(254, 97);
-            this.lblAddReceitas.Name = "lblAddReceitas";
-            this.lblAddReceitas.Size = new System.Drawing.Size(118, 25);
-            this.lblAddReceitas.TabIndex = 11;
-            this.lblAddReceitas.Text = "     Adicionar";
-            this.lblAddReceitas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblAddReceitas.Click += new System.EventHandler(this.buttonAddReceita_Click);
+            this.labelSaldo.AutoSize = true;
+            this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSaldo.Location = new System.Drawing.Point(866, 470);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.Size = new System.Drawing.Size(79, 25);
+            this.labelSaldo.TabIndex = 9;
+            this.labelSaldo.Text = "SALDO:";
             // 
-            // lblRemoverReceitas
+            // labelSaldoTotal
             // 
-            this.lblRemoverReceitas.AutoSize = true;
-            this.lblRemoverReceitas.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRemoverReceitas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblRemoverReceitas.ImageIndex = 2;
-            this.lblRemoverReceitas.ImageList = this.imageList1;
-            this.lblRemoverReceitas.Location = new System.Drawing.Point(378, 98);
-            this.lblRemoverReceitas.Name = "lblRemoverReceitas";
-            this.lblRemoverReceitas.Size = new System.Drawing.Size(110, 25);
-            this.lblRemoverReceitas.TabIndex = 12;
-            this.lblRemoverReceitas.Text = "     Remover";
-            this.lblRemoverReceitas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRemoverReceitas.Click += new System.EventHandler(this.btnRemoverEntrada_Click);
+            this.labelSaldoTotal.AutoSize = true;
+            this.labelSaldoTotal.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSaldoTotal.ForeColor = System.Drawing.Color.Black;
+            this.labelSaldoTotal.Location = new System.Drawing.Point(951, 470);
+            this.labelSaldoTotal.Name = "labelSaldoTotal";
+            this.labelSaldoTotal.Size = new System.Drawing.Size(73, 25);
+            this.labelSaldoTotal.TabIndex = 10;
+            this.labelSaldoTotal.Text = "R$0,00";
             // 
-            // label1
+            // btnAddEntrada
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.ImageIndex = 2;
-            this.label1.ImageList = this.imageList1;
-            this.label1.Location = new System.Drawing.Point(951, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 25);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "     Remover";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.btnRemoverSaida_Click);
+            this.btnAddEntrada.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddEntrada.FlatAppearance.BorderSize = 5;
+            this.btnAddEntrada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEntrada.ImageKey = "plus.png";
+            this.btnAddEntrada.ImageList = this.imageList1;
+            this.btnAddEntrada.Location = new System.Drawing.Point(277, 92);
+            this.btnAddEntrada.Name = "btnAddEntrada";
+            this.btnAddEntrada.Size = new System.Drawing.Size(118, 33);
+            this.btnAddEntrada.TabIndex = 15;
+            this.btnAddEntrada.Text = "Adicionar";
+            this.btnAddEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEntrada.UseVisualStyleBackColor = false;
+            this.btnAddEntrada.Click += new System.EventHandler(this.buttonAddReceita_Click);
             // 
-            // lblAddSaida
+            // btnAddSaida
             // 
-            this.lblAddSaida.AutoSize = true;
-            this.lblAddSaida.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAddSaida.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblAddSaida.ImageIndex = 0;
-            this.lblAddSaida.ImageList = this.imageList1;
-            this.lblAddSaida.Location = new System.Drawing.Point(827, 99);
-            this.lblAddSaida.Name = "lblAddSaida";
-            this.lblAddSaida.Size = new System.Drawing.Size(118, 25);
-            this.lblAddSaida.TabIndex = 13;
-            this.lblAddSaida.Text = "     Adicionar";
-            this.lblAddSaida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblAddSaida.Click += new System.EventHandler(this.buttonAddDespesa_Click);
+            this.btnAddSaida.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSaida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddSaida.ImageKey = "plus.png";
+            this.btnAddSaida.ImageList = this.imageList1;
+            this.btnAddSaida.Location = new System.Drawing.Point(827, 92);
+            this.btnAddSaida.Name = "btnAddSaida";
+            this.btnAddSaida.Size = new System.Drawing.Size(118, 33);
+            this.btnAddSaida.TabIndex = 16;
+            this.btnAddSaida.Text = "Adicionar";
+            this.btnAddSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddSaida.UseVisualStyleBackColor = false;
+            this.btnAddSaida.Click += new System.EventHandler(this.buttonAddDespesa_Click);
+            // 
+            // btnRemoveEntrada
+            // 
+            this.btnRemoveEntrada.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveEntrada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveEntrada.ImageKey = "minus-button.png";
+            this.btnRemoveEntrada.ImageList = this.imageList1;
+            this.btnRemoveEntrada.Location = new System.Drawing.Point(402, 92);
+            this.btnRemoveEntrada.Name = "btnRemoveEntrada";
+            this.btnRemoveEntrada.Size = new System.Drawing.Size(118, 33);
+            this.btnRemoveEntrada.TabIndex = 17;
+            this.btnRemoveEntrada.Text = "Remover";
+            this.btnRemoveEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemoveEntrada.UseVisualStyleBackColor = false;
+            this.btnRemoveEntrada.Click += new System.EventHandler(this.btnRemoverEntrada_Click);
+            // 
+            // btnRemoveSaida
+            // 
+            this.btnRemoveSaida.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveSaida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveSaida.ImageKey = "minus-button.png";
+            this.btnRemoveSaida.ImageList = this.imageList1;
+            this.btnRemoveSaida.Location = new System.Drawing.Point(951, 92);
+            this.btnRemoveSaida.Name = "btnRemoveSaida";
+            this.btnRemoveSaida.Size = new System.Drawing.Size(118, 33);
+            this.btnRemoveSaida.TabIndex = 18;
+            this.btnRemoveSaida.Text = "Remover";
+            this.btnRemoveSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemoveSaida.UseVisualStyleBackColor = false;
+            this.btnRemoveSaida.Click += new System.EventHandler(this.btnRemoverSaida_Click);
             // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1110, 507);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblAddSaida);
-            this.Controls.Add(this.lblRemoverReceitas);
-            this.Controls.Add(this.lblAddReceitas);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1157, 600);
+            this.Controls.Add(this.btnRemoveSaida);
+            this.Controls.Add(this.btnRemoveEntrada);
+            this.Controls.Add(this.btnAddSaida);
+            this.Controls.Add(this.btnAddEntrada);
+            this.Controls.Add(this.labelSaldoTotal);
             this.Controls.Add(this.labelSaldo);
             this.Controls.Add(this.labelAno);
             this.Controls.Add(this.labelMes);
@@ -399,12 +407,12 @@
         private ComboBox comboBoxMes;
         private Label labelMes;
         private Label labelAno;
-        private Label labelSaldo;
-        private Label label2;
         private ImageList imageList1;
-        private Label lblAddReceitas;
-        private Label lblRemoverReceitas;
-        private Label label1;
-        private Label lblAddSaida;
+        private Label labelSaldo;
+        private Label labelSaldoTotal;
+        private Button btnAddEntrada;
+        private Button btnAddSaida;
+        private Button btnRemoveEntrada;
+        private Button btnRemoveSaida;
     }
 }
