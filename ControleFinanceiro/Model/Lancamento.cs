@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControleFinanceiro
+namespace ControleFinanceiro.Model
 {
     public abstract class Lancamento
     {
@@ -17,6 +17,7 @@ namespace ControleFinanceiro
             _descricao = descricao;
             _value = value;
             _data = date;
+            Id = Guid.NewGuid();
         }
         public void LêDados()
         {
@@ -27,11 +28,12 @@ namespace ControleFinanceiro
             try
             {
                 Console.Write("Valor.....: ");
-                this._value = Double.Parse(Console.ReadLine());
+                _value = double.Parse(Console.ReadLine());
 
                 Console.Write("Data.........: ");
                 _data = Convert.ToDateTime(Console.Read);
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine($"Ocorreu um erro: {e}");
             }
@@ -41,9 +43,9 @@ namespace ControleFinanceiro
             Console.WriteLine("Nome do Aluno: {0}, {1}, {3}", Descricao, _value, Data);
         }
         public string Descricao { get => _descricao; set => _descricao = value; }
-        public double Value { get => this._value; set => this._value = value; }
+        public double Value { get => _value; set => _value = value; }
         public DateTime Data { get => _data; set => _data = value; }
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string? Categoria { get; set; }
     }
 }

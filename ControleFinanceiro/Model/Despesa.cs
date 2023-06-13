@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControleFinanceiro
+namespace ControleFinanceiro.Model
 {
     public class Despesa : Lancamento
     {
