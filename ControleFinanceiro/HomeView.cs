@@ -96,7 +96,7 @@ namespace ControleFinanceiro
             novaReceita.Value = Convert.ToDouble(dataGridReceitas.CurrentRow.Cells[1].Value);
             novaReceita.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
-            controller.UpdateData(novaReceita, dataGridReceitas.CurrentRow.Index);
+            controller.UpdateData(novaReceita, Convert.ToString(dataGridReceitas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
         }
 
@@ -107,7 +107,7 @@ namespace ControleFinanceiro
             novaDespesa.Value = Convert.ToDouble(dataGridDespesas.CurrentRow.Cells[1].Value);
             novaDespesa.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
-            controller.UpdateData( novaDespesa, dataGridDespesas.CurrentRow.Index);
+            controller.UpdateData( novaDespesa, Convert.ToString(dataGridDespesas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
         }
 
@@ -153,14 +153,17 @@ namespace ControleFinanceiro
 
         private void comboBoxMes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            atualizarSaldo();
             carregaGridReceitas();
             carregaGridDespesas();
         }
         private void atualizarSaldo()
         {
-            labelEntradasTotaisValor.Text = $"{controller.TotalDeReceitas().ToString("C")}";        
-            labelSaidasTotaisValor.Text = $"{controller.TodalDeDespesas().ToString("C")}";
-            double saldo = controller.TotalDeSaldo();
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
+            labelEntradasTotaisValor.Text = $"{controller.TotalDeReceitas(mes, ano).ToString("C")}";        
+            labelSaidasTotaisValor.Text = $"{controller.TodalDeDespesas(mes, ano).ToString("C")}";
+            double saldo = controller.TotalDeSaldo(mes, ano);
             labelSaldoTotal.Text = $"{saldo.ToString("C")}";
             if (saldo > 0)
                 labelSaldoTotal.ForeColor = Color.DarkOliveGreen;

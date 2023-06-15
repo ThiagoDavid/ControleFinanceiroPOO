@@ -26,17 +26,53 @@ namespace ControleFinanceiro
             Dados.Add(lancamento);
         }
 
-        public void UpdateData(Lancamento lancamento, int index)
+        public void UpdateData(Lancamento lancamento, string id)
         {
             if (lancamento.GetType().Equals(typeof(Despesa)))
             {
-                Dados.Despesas[index] = lancamento;
+                this.UpdateReceita(lancamento, id);
                 Console.WriteLine("Debug: DESPESA ATUALIZADA!!!");
             }
             else if (lancamento.GetType().Equals(typeof(Receita)))
             {
-                Dados.Receitas[index] = lancamento;
+                this.UpdateDespesa(lancamento, id);
                 Console.WriteLine("Debug: RECEITA ATUALIZADA!!!");
+            }
+        }
+
+        public void UpdateReceita(Lancamento lancamento, string id)
+        {
+            try
+            {
+                foreach (Receita x in Dados.Receitas)
+                    if (x.Id.ToString() == id)
+                    {
+                        Dados.Receitas.Remove(x);
+                        Dados.Receitas.Add(lancamento);
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void UpdateDespesa(Lancamento lancamento, string id)
+        {
+            try
+            {
+                foreach (Despesa x in Dados.Despesas)
+                    if (x.Id.ToString() == id)
+                    {
+                        Dados.Despesas.Remove(x);
+                        Dados.Despesas.Add(lancamento);
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -87,7 +123,16 @@ namespace ControleFinanceiro
                 ano = DateTime.Now.Year;
             ArrayList dados = this.dados.Receitas;
 
-            return new ArrayList(dados.Cast<Receita>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
+            try
+            {
+                dados = new ArrayList(dados.Cast<Receita>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
+            } 
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show($"Erro ao tentar converte para  receitas: {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+
+            return dados;
         }
 
         public ArrayList GetDespesas(int mes = 0, int ano = 0)
@@ -101,25 +146,25 @@ namespace ControleFinanceiro
             return new ArrayList(dados.Cast<Despesa>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
         }
 
-        public double TotalDeReceitas()
+        public double TotalDeReceitas(int mes, int ano)
         {
-            Receita[] receitas = (Receita[])Dados.Receitas.ToArray(typeof(Receita));
+            Receita[] receitas = (Receita[])this.GetReceitas(mes, ano).ToArray(typeof(Receita));
             double sum = receitas.Sum(obj => obj.Value);
 
             return sum;
         }
 
-        public double TodalDeDespesas()
+        public double TodalDeDespesas(int mes, int ano)
         {
-            Despesa[] despesas = (Despesa[])Dados.Despesas.ToArray(typeof(Despesa));
+            Despesa[] despesas = (Despesa[])this.GetDespesas(mes, ano).ToArray(typeof(Despesa));
             double sum = despesas.Sum(obj => obj.Value);
 
             return sum;
         }
 
-        public double TotalDeSaldo()
+        public double TotalDeSaldo(int mes = 0, int ano = 0)
         {
-            return TotalDeReceitas() - TodalDeDespesas();
+            return TotalDeReceitas(mes, ano) - TodalDeDespesas(mes, ano);
         }
     }
 }
