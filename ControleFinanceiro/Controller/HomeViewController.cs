@@ -39,7 +39,7 @@ namespace ControleFinanceiro.Controller
                 Console.WriteLine("Debug: RECEITA ATUALIZADA!!!");
             }
         }
-
+        // TO DO: adaptar pra uma unica funcao
         public void UpdateReceita(Lancamento lancamento, string id)
         {
             try
@@ -47,8 +47,9 @@ namespace ControleFinanceiro.Controller
                 foreach (Receita x in Dados.Receitas)
                     if (x.Id.ToString() == id)
                     {
-                        Dados.Receitas.Remove(x);
-                        Dados.Receitas.Add(lancamento);
+                        x.Data = lancamento.Data;
+                        x.Descricao = lancamento.Descricao;
+                        x.Value = lancamento.Value;
                         break;
                     }
             }
@@ -65,8 +66,9 @@ namespace ControleFinanceiro.Controller
                 foreach (Despesa x in Dados.Despesas)
                     if (x.Id.ToString() == id)
                     {
-                        Dados.Despesas.Remove(x);
-                        Dados.Despesas.Add(lancamento);
+                        x.Data = lancamento.Data;
+                        x.Descricao = lancamento.Descricao;
+                        x.Value = lancamento.Value;
                         break;
                     }
             }

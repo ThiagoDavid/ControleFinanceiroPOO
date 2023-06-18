@@ -32,19 +32,17 @@ namespace ControleFinanceiro
                 carregaGridReceitas();
             if (controller.Dados.Receitas.Count != 0)
                 carregaGridDespesas();
-            atualizarSaldo();
         }
 
-        private void carregaGridReceitas(int mes = 0, int ano = 0)
+        private void carregaGridReceitas()
         {
-            if(ano == 0 )
-                ano = (int)numericUpDownAno.Value;
-            if(mes == 0 )
-                mes = comboBoxMes.SelectedIndex + 1;
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
 
             dataGridReceitas.DataSource = null;
             dataGridReceitas.DataSource = controller.GetReceitas(mes, ano);
             setupGridStyle(dataGridReceitas);
+            atualizarSaldo();
         }
         private void carregaGridDespesas(int mes = 0, int ano = 0)
         {
@@ -56,6 +54,7 @@ namespace ControleFinanceiro
             dataGridDespesas.DataSource = null;
             dataGridDespesas.DataSource = controller.GetDespesas(mes, ano);
             setupGridStyle(dataGridDespesas);
+            atualizarSaldo();
         }
         private void setupGridStyle(DataGridView dataGrid)
         {
@@ -98,7 +97,7 @@ namespace ControleFinanceiro
             novaReceita.Value = Convert.ToDouble(dataGridReceitas.CurrentRow.Cells[1].Value);
             novaReceita.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
-            controller.UpdateData(novaReceita, Convert.ToString(dataGridReceitas.CurrentRow.Cells[3].Value));
+            controller.UpdateData(novaReceita, id: Convert.ToString(dataGridReceitas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
         }
 
@@ -109,7 +108,7 @@ namespace ControleFinanceiro
             novaDespesa.Value = Convert.ToDouble(dataGridDespesas.CurrentRow.Cells[1].Value);
             novaDespesa.Data = DateTime.Now; // trocar posteriormente por data selecionada
 
-            controller.UpdateData( novaDespesa, Convert.ToString(dataGridDespesas.CurrentRow.Cells[3].Value));
+            controller.UpdateData( novaDespesa, id: Convert.ToString(dataGridDespesas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
         }
 
@@ -145,7 +144,6 @@ namespace ControleFinanceiro
 
         private void comboBoxMes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            atualizarSaldo();
             carregaGridReceitas();
             carregaGridDespesas();
         }
