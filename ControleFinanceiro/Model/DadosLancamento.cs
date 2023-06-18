@@ -40,6 +40,78 @@ namespace ControleFinanceiro.Model
             }
         }
 
+        public void RemoverReceita(string id)
+        {
+            try
+            {
+                foreach (Receita x in this.Receitas)
+                    if (x.Id.ToString() == id)
+                    {
+                        this.Receitas.Remove(x);
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar remover receita: {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void RemoverDespesa(string id)
+        {
+            try
+            {
+                foreach (Despesa x in this.Despesas)
+                    if (x.Id.ToString() == id)
+                    {
+                        this.Despesas.Remove(x);
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar remover despesas {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void UpdateDespesa(Lancamento lancamento, string id)
+        {
+            try
+            {
+                foreach (Despesa x in this.Despesas)
+                    if (x.Id.ToString() == id)
+                    {
+                        x.Data = lancamento.Data;
+                        x.Descricao = lancamento.Descricao;
+                        x.Value = lancamento.Value;
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void UpdateReceita(Lancamento lancamento, string id)
+        {
+            try
+            {
+                foreach (Receita x in this.Receitas)
+                    if (x.Id.ToString() == id)
+                    {
+                        x.Data = lancamento.Data;
+                        x.Descricao = lancamento.Descricao;
+                        x.Value = lancamento.Value;
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void Salvar()
         {
             conexaoDB.SalvarDados(this.Receitas, this.Despesas);

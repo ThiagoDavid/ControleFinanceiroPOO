@@ -30,86 +30,25 @@ namespace ControleFinanceiro.Controller
         {
             if (lancamento.GetType().Equals(typeof(Receita)))
             {
-                UpdateReceita(lancamento, id);
+                Dados.UpdateReceita(lancamento, id);
                 Console.WriteLine("Debug: DESPESA ATUALIZADA!!!");
             }
             else if (lancamento.GetType().Equals(typeof(Despesa)))
             {
-                UpdateDespesa(lancamento, id);
+                Dados.UpdateDespesa(lancamento, id);
                 Console.WriteLine("Debug: RECEITA ATUALIZADA!!!");
             }
         }
         // TO DO: adaptar pra uma unica funcao
-        public void UpdateReceita(Lancamento lancamento, string id)
-        {
-            try
-            {
-                foreach (Receita x in Dados.Receitas)
-                    if (x.Id.ToString() == id)
-                    {
-                        x.Data = lancamento.Data;
-                        x.Descricao = lancamento.Descricao;
-                        x.Value = lancamento.Value;
-                        break;
-                    }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void UpdateDespesa(Lancamento lancamento, string id)
-        {
-            try
-            {
-                foreach (Despesa x in Dados.Despesas)
-                    if (x.Id.ToString() == id)
-                    {
-                        x.Data = lancamento.Data;
-                        x.Descricao = lancamento.Descricao;
-                        x.Value = lancamento.Value;
-                        break;
-                    }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"Erro ao tentar Atualizar receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public void RemoveReceita(string id)
         {
-            try
-            {
-                foreach (Receita x in Dados.Receitas)
-                    if (x.Id.ToString() == id)
-                    {
-                        Dados.Receitas.Remove(x);
-                        break;
-                    }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"Erro ao tentar remover receita {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Dados.RemoverReceita(id);
         }
 
         public void RemoveDespesas(string id)
         {
-            try
-            {
-                foreach (Despesa x in Dados.Despesas)
-                    if (x.Id.ToString() == id)
-                    {
-                        Dados.Despesas.Remove(x);
-                        break;
-                    }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"Erro ao tentar remover despesas {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Dados.RemoverDespesa(id);
         }
 
         public void SalvarDados()

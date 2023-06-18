@@ -95,7 +95,10 @@ namespace ControleFinanceiro
             Lancamento novaReceita = new Receita();
             novaReceita.Descricao = Convert.ToString(dataGridReceitas.CurrentRow.Cells[0].Value);
             novaReceita.Value = Convert.ToDouble(dataGridReceitas.CurrentRow.Cells[1].Value);
-            novaReceita.Data = DateTime.Now; // trocar posteriormente por data selecionada
+
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
+            novaReceita.Data = new DateTime(ano, mes, 1); // trocar posteriormente por data selecionada
 
             controller.UpdateData(novaReceita, id: Convert.ToString(dataGridReceitas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
@@ -106,7 +109,10 @@ namespace ControleFinanceiro
             Lancamento novaDespesa = new Despesa();
             novaDespesa.Descricao = Convert.ToString(dataGridDespesas.CurrentRow.Cells[0].Value);
             novaDespesa.Value = Convert.ToDouble(dataGridDespesas.CurrentRow.Cells[1].Value);
-            novaDespesa.Data = DateTime.Now; // trocar posteriormente por data selecionada
+
+            int ano = (int)numericUpDownAno.Value;
+            int mes = comboBoxMes.SelectedIndex + 1;
+            novaDespesa.Data = new DateTime(ano, mes, 1); // trocar posteriormente por data selecionada
 
             controller.UpdateData( novaDespesa, id: Convert.ToString(dataGridDespesas.CurrentRow.Cells[3].Value));
             atualizarSaldo();
