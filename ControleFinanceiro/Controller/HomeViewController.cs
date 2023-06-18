@@ -15,9 +15,9 @@ namespace ControleFinanceiro.Controller
 
         internal DadosLancamento Dados { get => dados; set => dados = value; }
 
-        public HomeViewController()
+        public HomeViewController(DBConnection dBConnection)
         {
-            Dados = new DadosLancamento();
+            Dados = new DadosLancamento(dBConnection);
         }
 
         public void Add(Lancamento lancamento)
@@ -28,12 +28,12 @@ namespace ControleFinanceiro.Controller
 
         public void UpdateData(Lancamento lancamento, string id)
         {
-            if (lancamento.GetType().Equals(typeof(Despesa)))
+            if (lancamento.GetType().Equals(typeof(Receita)))
             {
                 UpdateReceita(lancamento, id);
                 Console.WriteLine("Debug: DESPESA ATUALIZADA!!!");
             }
-            else if (lancamento.GetType().Equals(typeof(Receita)))
+            else if (lancamento.GetType().Equals(typeof(Despesa)))
             {
                 UpdateDespesa(lancamento, id);
                 Console.WriteLine("Debug: RECEITA ATUALIZADA!!!");
@@ -143,7 +143,15 @@ namespace ControleFinanceiro.Controller
                 ano = DateTime.Now.Year;
             ArrayList dados = this.dados.Despesas;
 
-            return new ArrayList(dados.Cast<Despesa>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
+            try
+            {
+                dados = new ArrayList(dados.Cast<Despesa>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
+            }
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show($"Erro ao tentar converte para  despesas: {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dados;
         }
 
         public double TotalDeReceitas(int mes, int ano)

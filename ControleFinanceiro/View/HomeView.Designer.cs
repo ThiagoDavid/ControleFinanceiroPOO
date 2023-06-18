@@ -95,7 +95,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1157, 28);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // buttonSave
             // 
@@ -243,7 +242,6 @@
             this.labelMes.Size = new System.Drawing.Size(33, 15);
             this.labelMes.TabIndex = 7;
             this.labelMes.Text = "MÊS:";
-            this.labelMes.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelAno
             // 

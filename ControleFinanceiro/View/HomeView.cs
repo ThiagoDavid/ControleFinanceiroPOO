@@ -3,6 +3,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
 using ControleFinanceiro.Model;
 using ControleFinanceiro.Controller;
+using ControleFinanceiro.Interface;
 
 namespace ControleFinanceiro
 {
@@ -11,7 +12,7 @@ namespace ControleFinanceiro
         HomeViewController controller;
         public HomeView()
         {
-            controller = new HomeViewController();
+            controller = new HomeViewController(new ConexaoXML());
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -140,16 +141,6 @@ namespace ControleFinanceiro
             controller.SalvarDados();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void comboBoxMes_SelectedIndexChanged(object sender, EventArgs e)
