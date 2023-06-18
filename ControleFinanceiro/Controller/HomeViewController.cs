@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ControleFinanceiro.Model;
 using static System.Formats.Asn1.AsnWriter;
 
-namespace ControleFinanceiro
+namespace ControleFinanceiro.Controller
 {
     internal class HomeViewController
     {
@@ -30,12 +30,12 @@ namespace ControleFinanceiro
         {
             if (lancamento.GetType().Equals(typeof(Despesa)))
             {
-                this.UpdateReceita(lancamento, id);
+                UpdateReceita(lancamento, id);
                 Console.WriteLine("Debug: DESPESA ATUALIZADA!!!");
             }
             else if (lancamento.GetType().Equals(typeof(Receita)))
             {
-                this.UpdateDespesa(lancamento, id);
+                UpdateDespesa(lancamento, id);
                 Console.WriteLine("Debug: RECEITA ATUALIZADA!!!");
             }
         }
@@ -126,11 +126,11 @@ namespace ControleFinanceiro
             try
             {
                 dados = new ArrayList(dados.Cast<Receita>().Where(objeto => objeto.Data.Month == mes && objeto.Data.Year == ano).ToList());
-            } 
+            }
             catch (InvalidCastException e)
             {
                 MessageBox.Show($"Erro ao tentar converte para  receitas: {e}", "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+            }
 
             return dados;
         }
@@ -148,7 +148,7 @@ namespace ControleFinanceiro
 
         public double TotalDeReceitas(int mes, int ano)
         {
-            Receita[] receitas = (Receita[])this.GetReceitas(mes, ano).ToArray(typeof(Receita));
+            Receita[] receitas = (Receita[])GetReceitas(mes, ano).ToArray(typeof(Receita));
             double sum = receitas.Sum(obj => obj.Value);
 
             return sum;
@@ -156,7 +156,7 @@ namespace ControleFinanceiro
 
         public double TodalDeDespesas(int mes, int ano)
         {
-            Despesa[] despesas = (Despesa[])this.GetDespesas(mes, ano).ToArray(typeof(Despesa));
+            Despesa[] despesas = (Despesa[])GetDespesas(mes, ano).ToArray(typeof(Despesa));
             double sum = despesas.Sum(obj => obj.Value);
 
             return sum;

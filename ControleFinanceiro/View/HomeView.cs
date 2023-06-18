@@ -2,6 +2,7 @@ using System.Collections;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
 using ControleFinanceiro.Model;
+using ControleFinanceiro.Controller;
 
 namespace ControleFinanceiro
 {
